@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabayan SMP Season 3</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="menu">
+            <a href="#pluginsPage.html"><i class="fas fa-server"></i> Plugin</a>
+            <a href="/IPPORTS/ipandport.html"><i class="fas fa-network-wired"></i>IP/Port</a>
+            <a href="/Dynmap.html"><i class="fas fa-map"></i>Map</a>
+        </div>
+
+        <div class="hero-content">
+            <h1>Welcome to Kabayan SMP <br> Season 3</h1>
+            <img src="https://share.creavite.co/67a1f08b0ae0e4f686a68df0.gif" alt="Kabayan SMP Banner 1" class="hero-gif">
+            <p id="game-message">
+                <i class="fas fa-gamepad"></i> Survive. Build. Conquer. <i class="fas fa-crown"></i>
+            </p>            
+            <a href="#about" class="btn"><i class="fas fa-arrow-down"></i> Learn More</a>
+        </div>              
+    </section>
+
+    <!-- Second GIF in Countdown Section -->
+<section id="countdown">
+    <h2><i class="fas fa-hourglass-half"></i> Countdown to Season 4</h2>
+    <img src="https://share.creavite.co/67a1f2860ae0e4f686a68df2.gif" alt="Countdown Banner" class="countdown-gif">
+    <div id="timer">
+        <div class="time-box">
+            <span id="days"></span>
+            <small>Days</small>
+        </div>
+        <div class="time-box">
+            <span id="hours"></span>
+            <small>Hours</small>
+        </div>
+        <div class="time-box">
+            <span id="minutes"></span>
+            <small>Minutes</small>
+        </div>
+        <div class="time-box">
+            <span id="seconds"></span>
+            <small>Seconds</small>
+        </div>
+    </div>
+</section>
+
+    <!-- About Section (Auto Server Info) -->
+    <section id="about">
+        <h2><i class="fas fa-server"></i> About Our Server</h2>
+        <p>Kabayan SMP is a survival multiplayer server for players who love adventure.</p>
+        
+        <!-- Server Info Section -->
+        <div class="server-info">
+            <div class="card">
+                <i class="fas fa-clock"></i>
+                <h3>Uptime</h3>
+                <p id="server-uptime">24/7 Online</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Active Players</h3>
+                <p id="player-count">Loading...</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our dedicated support team is available around the clock to assist you.</p>
+            </div>
+        </div>
+    </section>
+
+
+        <div class="player-list" style="display: none;"> 
+            <h3>Players Online</h3>
+            <ul id="player-list-container">
+                <!-- Each player will be added here -->
+                <li>
+                    <img src="https://crafatar.com/avatars/UUID?size=32" class="player-avatar" alt="Player Name">
+                    <span>Player Name</span>
+                </li>
+                <!-- More players -->
+            </ul>
+        </div>
+
+        <div class="system-stats-section" style="display: none;">
+            <h3><i class="fas fa-tachometer-alt"></i> System Stats</h3>
+            <div class="system-stats">
+                <div class="card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>CPU Usage</h3>
+                    <p id="cpu-usage">Loading...</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-memory"></i>
+                    <h3>Memory Usage</h3>
+                    <p id="memory-usage">Loading...</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-hdd"></i>
+                    <h3>Disk Usage</h3>
+                    <p id="disk-usage">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Button (Bottom Right Corner) -->
+<div id="supportButton">
+    <i class="fas fa-headset"></i>
+</div>
+
+<!-- Modal for Ticket System -->
+<div id="ticketModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>🎫 Submit a Support Ticket</h2>
+        <form id="ticketForm">
+            <label for="minecraftUsername">Minecraft Username:</label>
+            <input type="text" id="minecraftUsername" placeholder="Your Minecraft Name" required>
+
+            <label for="discordUsername">Discord Username:</label>
+            <input type="text" id="discordUsername" placeholder="Your Discord Username" required>
+
+            <label for="issue">Describe Your Issue:</label>
+            <textarea id="issue" rows="4" placeholder="Explain your issue in detail..." required></textarea>
+
+            <button type="submit">Submit Ticket</button>
+            <p id="ticketResponse"></p>
+        </form>
+    </div>
+</div>
+
+
+
+    <!-- Modal for Server Starting -->
+    <div id="server-starting-modal" class="modal">
+        <!-- Background Blur -->
+        <div class="modal-background"></div>
+
+        <!-- Modal Content -->
+        <div class="modal-content">
+            <h2>The Server is Starting...</h2>
+            <p>Please wait a moment while the server is booting up.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Server Offline -->
+    <div id="server-offline-modal" class="modal">
+        <!-- Background Blur -->
+        <div class="modal-background"></div>
+
+        <!-- Modal Content -->
+        <div class="modal-content">
+            <h2>The Server is Offline</h2>
+            <p>Please check back later or contact the server administrator.</p>
+        </div>
+    </div>
+
+    <!-- Rules Section -->
+<section id="rules">
+    <h2><i class="fas fa-book"></i> Server Rules</h2>
+    <p>For the latest and detailed rules, please visit our <a href="https://discord.com/invite/8zytdvfw6Q" target="_blank">Discord server</a>.</p>
+    <p>Follow these essential rules to keep the community fun and friendly:</p>
+    <div class="rules-list">
+        <div class="rule-item">
+            <i class="fas fa-ban"></i>
+            <p><strong>No Griefing:</strong> Do not destroy or steal other players' builds or items.</p>
+        </div>
+        <div class="rule-item">
+            <i class="fas fa-users"></i>
+            <p><strong>Respect Others:</strong> Treat all players and staff with kindness and respect.</p>
+        </div>
+        <div class="rule-item">
+            <i class="fas fa-shield-alt"></i>
+            <p><strong>No Cheating:</strong> Hacked clients, exploits, or unauthorized mods are strictly prohibited.</p>
+        </div>
+        <div class="rule-item">
+            <i class="fas fa-comment-slash"></i>
+            <p><strong>No Spam or Advertising:</strong> Avoid excessive messages and do not promote other servers.</p>
+        </div>
+        <div class="rule-item">
+            <i class="fas fa-comments"></i>
+            <p><strong>Keep Chat Clean:</strong> No hate speech, offensive language, or inappropriate topics.</p>
+        </div>
+        <div class="rule-item">
+            <i class="fas fa-code-branch"></i>
+            <p><strong>No Unapproved Mods:</strong> Only client-side mods that do not provide unfair advantages are allowed.</p>
+        </div>
+        <div class="rule-item">
+            <i class="fas fa-hammer"></i>
+            <p><strong>Respect Builds:</strong> Do not modify or destroy other players' structures without permission.</p>
+        </div>
+        <div class="rule-item">
+            <i class="fas fa-gavel"></i>
+            <p><strong>Follow Admin Instructions:</strong> Staff decisions are final, and rules may be updated as needed.</p>
+        </div>
+        <div class="rule-item">
+            <i class="fas fa-gamepad"></i>
+            <p><strong>Have Fun:</strong> Enjoy the game and help create an awesome community!</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2><i class="fas fa-headset"></i> Contact Us</h2>
+        <p>Join our Discord for updates and community discussions.</p>
+        <a href="https://discord.com/invite/8zytdvfw6Q" class="btn"><i class="fab fa-discord"></i> Join Discord</a>
+    </section>
+
+    <script src="/script.js"></script>
+</body>
+</html>
